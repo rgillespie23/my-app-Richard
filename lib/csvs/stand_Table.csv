@@ -1,0 +1,44 @@
+Stand_ID,Stand_Name,Best_Wind_ID,Worst_Wind_ID,Type_of_Stand_ID,Acreage_ID
+1,Front Clover,2,6,1,1
+2,Old Dove Field Box,2,6,2,2
+3,Old Dovie Field Metal,4,8,1,2
+4,Secret Spot,5,1,1,3
+5,Steen Hollow,6,2,1,4
+6,Hub & Spoke Metal,5,1,1,12
+7,Hub & Spoke Box,6,3,2,5
+8,Dead end Feeder,5,8,1,13
+9,Mudhole South Box,4,1,2,6
+10,Mudhole South Metal,1,5,1,6
+11,Rifle Range,3,8,2,7
+12,Big Plot Box,4,1,2,8
+13,Big Plot Metal,3,7,1,8
+14,Small Plot North,5,2,1,9
+15,Small Plot South,7,4,1,9
+16,Creek Crossing West,3,7,1,10
+17,Creek Crossing East,5,1,1,10
+18,Creek Crossing Middle,5,8,1,10
+19,Guitar Box,4,7,2,11
+20,Guitar Metal,6,3,1,11
+21,Camo Box,7,3,2,14
+22,Hen Ridge,5,7,1,15
+23,Ridge Plot,3,7,1,14
+24,South Swamp,4,8,1,14
+25,Cherry Plot,6,2,2,16
+26,North Swamp North,5,1,1,17
+38,North Swamp South,8,4,1,17
+27,New Plot,1,6,1,18
+28,Rock Plot,7,4,1,19
+29,Giant Plot Middle,1,8,1,20
+30,Top Giant Plot,3,8,1,20
+31,Dead End,1,4,1,21
+39,Dead End Clear Cut,5,2,1,22
+32,Dead End Road,1,6,1,23
+33,Double Field,1,3,2,24
+34,Late to hunt Box,5,2,2,25
+40,Late to hunt Metal,1,4,1,25
+35,V Stand Box,5,1,2,26
+41,V Stand Metal,1,5,1,26
+36,Acorn Stand,7,4,1,13
+37,Split Field East,2,6,2,27
+42,Split Field West,2,7,2,27
+43,Bobby's Chufa,4,8,1,28

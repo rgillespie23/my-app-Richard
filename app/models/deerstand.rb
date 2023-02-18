@@ -1,0 +1,2 @@
+class Deerstand < ApplicationRecord
+end
