@@ -10,15 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_18_191705) do
+ActiveRecord::Schema.define(version: 2023_02_18_225452) do
 
-  create_table "deerstands", force: :cascade do |t|
-    t.string "stand_id"
-    t.string "stand_name"
-    t.string "best_wind_id"
-    t.string "worst_wind_id"
-    t.string "type_of_stand_id"
-    t.string "acreage_id"
+  create_table "foodsources", force: :cascade do |t|
+    t.integer "food_source_id"
+    t.integer "stand_id"
+    t.integer "crop_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,13 +27,6 @@ ActiveRecord::Schema.define(version: 2023_02_18_191705) do
     t.integer "worst_wind_id"
     t.integer "type_of_stand"
     t.integer "acreage_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "tests", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
