@@ -77,4 +77,12 @@ class StandController < ApplicationController
     end
   end
 
+  def delete_stand
+    the_id = params.fetch("path_id")
+    matching_stands = Stand.where({ :stand_id => the_id})
+    the_stand = matching_stands.at(0)
+    the_stand.destroy
+    redirect_to("/stands")
+  end
+
 end

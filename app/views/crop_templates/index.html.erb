@@ -1,16 +1,31 @@
 <h1>List of Crops</h1>
 
+<p><%= notice %></p>
+
+<form action="/insert_crop">
+
+  <label for="crop_type">Crop Type</label>
+  <input id="crop_type" name="query_crop_type">
+
+  <button>Add Crop</button>
+</form>
+
+<p></p>
+
 <table border="1">
   <tr>
     <td>Crop</td>
     <td>Details</td>
   </tr>
   <% @list_of_crops.each do |a_crop|%>
-  <tr>
-    <td><%= a_crop.crop_type %></td>
-    <td>
-      <a href="/crops/<%= a_crop.crop_id %>">Show details
-    </td>
-  </tr>
+    <% if a_crop.stands.at(0) != nil %>
+      <tr>
+        <td><%= a_crop.crop_type %></td>
+        <td>
+          <a href="/crops/<%= a_crop.crop_id %>">Show details
+        </td>
+      </tr>
+    <% else %>
+    <% end%>
   <% end %>
 </table>

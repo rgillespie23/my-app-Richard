@@ -21,6 +21,12 @@
   <dd><%= @stand.best_wind.wind_direction %></dd>
   <dt>Worst Wind</dt>
   <dd><%= @stand.worst_wind.wind_direction %></dd>
+  <dt>Delete stand</dt>
+  <dd>
+    <a href="/delete_stand/<%= @stand.stand_id %>;">
+      Delete this stand
+    </a>
+  </dd>
 
 </dl>
 

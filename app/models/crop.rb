@@ -24,9 +24,12 @@ class Crop < ApplicationRecord
     my_foodsources = self.foodsources
 
     my_foodsources.each do |a_foodsource|
-      the_stand = a_foodsource.stand
+      if a_foodsource.crop != nil && a_foodsource.stand != nil
+        the_stand = a_foodsource.stand
 
-      array_of_stand_ids.push(the_stand.stand_id)
+        array_of_stand_ids.push(the_stand.stand_id)
+      else
+      end
     end
 
     matching_stands = Stand.where({ :stand_id => array_of_stand_ids })
