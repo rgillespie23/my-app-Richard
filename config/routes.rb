@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   get("/winds/:path_id", { :controller => "wind", :action => "show"})
 
+  get("/insert_stand", { :controller => "stand", :action => "create"})
+
 end

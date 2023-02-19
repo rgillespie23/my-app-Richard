@@ -1,5 +1,28 @@
 <h1>List of Stands</h1>
 
+<p><%= notice %></p>
+
+<form action="/insert_stand">
+  <label for="stand_name">Stand Name</label>
+  <input id="stand_name" name="query_name">
+
+  <label for="best_wind">Best Wind</label>
+  <input id="best_wind" name="query_best_wind"></input>
+
+  <label for="worst_wind">Worst Wind</label>
+  <input id="worst_wind" name="query_worst_wind">
+
+  <label for="stand_type">Stand Type</label>
+  <input id="stand_type" name="query_stand_type">
+
+  <label for="acreage">Acreage</label>
+  <input id="acreage" name="query_acreage">
+
+  <button>Add Stand</button>
+</form>
+
+<p></p>
+
 <table border="1">
   <tr>
     <td>Stand ID</td>
