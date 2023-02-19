@@ -2,4 +2,8 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "home", :action => "home"})
 
+  get("/stands", { :controller => "stand", :action => "index"})
+
+  get("/stands/:path_id", { :controller => "stand", :action => "show"})
+
 end

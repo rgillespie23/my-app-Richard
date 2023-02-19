@@ -1,0 +1,25 @@
+<h1><%= @stand.stand_name %></h1>
+
+<a href="/stands">Go back</a>
+<hr>
+<dl>
+  <dt>Name</dt>
+  <dd><%= @stand.stand_name %></dd>
+  <dt>Type of Stand</dt>
+  <dd><%= @stand.type_of_stand %></dd>
+  <dt>Crops Planted</dt>
+  <dd>
+    <ul>
+      <%# @stand.crops.each do |a_crop| %>
+        <li>placeholder<%#= a_crop.crop_type %></li>
+      <%# end %>
+    </ul>
+  </dd>
+  <dt>Field Acreage</dt>
+  <dd><%= @stand.acreage_id %></dd>
+  <dt>Best Wind</dt>
+  <dd><%= @stand.best_wind_id %></dd>
+  <dt>Worst Wind</dt>
+  <dd><%= @stand.worst_wind_id %></dd>
+
+</dl>
