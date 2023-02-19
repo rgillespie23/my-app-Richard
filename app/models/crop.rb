@@ -9,4 +9,29 @@
 #  crop_id    :integer
 #
 class Crop < ApplicationRecord
+
+  def foodsources
+    my_id = self.id
+
+    matching_foodsources = Foodsource.where({ :crop_id => my_id })
+
+    return matching_foodsources
+  end
+
+  def stands
+    array_of_stand_ids = Array.new
+
+    my_foodsources = self.foodsources
+
+    my_foodsources.each do |a_foodsource|
+      the_stand = a_foodsource.stand
+
+      array_of_stand_ids.push(the_stand.stand_id)
+    end
+
+    matching_stands = Stand.where({ :stand_id => array_of_stand_ids })
+
+    return matching_stands
+  end
+
 end

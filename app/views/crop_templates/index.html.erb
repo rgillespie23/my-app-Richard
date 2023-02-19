@@ -1,0 +1,16 @@
+<h1>List of Crops</h1>
+
+<table border="1">
+  <tr>
+    <td>Crop</td>
+    <td>Details</td>
+  </tr>
+  <% @list_of_crops.each do |a_crop|%>
+  <tr>
+    <td><%= a_crop.crop_type %></td>
+    <td>
+      <a href="/crops/<%= a_crop.crop_id %>">Show details
+    </td>
+  </tr>
+  <% end %>
+</table>

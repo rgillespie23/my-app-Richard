@@ -1,0 +1,12 @@
+<h1><%= @crop.crop_type %></h1>
+
+<a href="/crops">Go back</a>
+<hr>
+<h2>Best stands if you want to hunt over <%= @crop.crop_type %></h2>
+<ul>
+  <% @crop.stands.each do |a_stand|%>
+  <li>
+    <a href="/stands/<%= a_stand.stand_id %>"><%= a_stand.stand_name %></a>
+  </li>
+  <% end %>
+</ul>

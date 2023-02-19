@@ -14,4 +14,8 @@ Rails.application.routes.draw do
 
   get("/insert_new_crop", { :controller => "stand", :action => "create_crop"})
 
+  get("/crops", { :controller => "crop", :action => "index"})
+
+  get("/crops/:path_id", { :controller => "crop", :action => "show"})
+
 end

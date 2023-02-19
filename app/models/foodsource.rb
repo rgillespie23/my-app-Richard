@@ -20,5 +20,15 @@ class Foodsource < ApplicationRecord
 
     return the_crop
   end
+
+  def stand
+    my_stand_id = self.stand_id
+
+    matching_stands = Stand.where({ :stand_id => my_stand_id })
+
+    the_stand = matching_stands.at(0)
+
+    return the_stand
+  end
   
 end
