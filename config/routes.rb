@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get("/insert_stand", { :controller => "stand", :action => "create"})
 
+  get("/insert_new_crop", { :controller => "stand", :action => "create_crop"})
+
 end

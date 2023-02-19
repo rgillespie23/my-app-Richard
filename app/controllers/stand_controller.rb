@@ -57,4 +57,24 @@ class StandController < ApplicationController
 
   end
 
+  def create_crop
+    input_stand_id = params.fetch("input_stand_id")
+    input_crop_type = params.fetch("query_crop")
+
+    if Crop.where( :crop_type => input_crop_type).at(0) != nil
+      a_new_foodsource = Foodsource.new
+      a_new_foodsource.stand_id = input_stand_id
+      a_new_foodsource.crop_id = Crop.where(:crop_type => input_crop_type).at(0).crop_id
+      a_new_foodsource.save
+
+      #have to do 2 lines below because messed up my original tables because I forgot it would automatically assign a column for id 
+      a_new_foodsource.food_source_id = a_new_foodsource.id
+      a_new_foodsource.save
+
+      redirect_to("/stands/" + input_stand_id.to_s)
+    else
+      redirect_to("/stands/" + input_stand_id.to_s, { :notice => "Invalid crop type. Check capitalization and note that available crop types are limited"})
+    end
+  end
+
 end
