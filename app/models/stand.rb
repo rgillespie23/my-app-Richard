@@ -13,4 +13,15 @@
 #  worst_wind_id :integer
 #
 class Stand < ApplicationRecord
+
+  def stand_type
+    my_type_of_stand = self.type_of_stand
+
+    matching_types = Type.where({ :id => my_type_of_stand })
+
+    the_type = matching_types.at(0)
+
+    return the_type
+  end
+  
 end
