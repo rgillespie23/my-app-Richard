@@ -1,0 +1,16 @@
+<h1>List of Winds</h1>
+
+<table border="1">
+  <tr>
+    <td>Wind Direction</td>
+    <td>Details</td>
+  </tr>
+  <% @list_of_winds.each do |a_wind|%>
+  <tr>
+    <td><%= a_wind.wind_direction %></td>
+    <td>
+      <a href="/winds/<%= a_wind.wind_direction_id %>">Show details
+    </td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,12 @@
+<h1><%= @wind.wind_direction %></h1>
+
+<a href="/winds">Go back</a>
+<hr>
+<h2>Best Stands to hunt with <%= @wind.wind_direction %> wind</h2>
+<ul>
+  <% @wind.stands.each do |a_stand|%>
+  <li>
+    <a href="/stands/<%= a_stand.stand_id %>"><%= a_stand.stand_name %></a>
+  </li>
+  <% end %>
+</ul>
