@@ -25,11 +25,11 @@
       infowindow.open(map, marker);
     });
 
-  bounds.extend(new google.maps.LatLng(41.8381065, -87.6512738 ));
+  bounds.extend(new google.maps.LatLng(34.5401488, -80.7370185 ));
 
   map.fitBounds(bounds);
   };
   
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=[API KEY]&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV.fetch("NEWMAP_KEY") %>&callback=initMap"
 async defer></script>
