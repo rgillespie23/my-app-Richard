@@ -13,12 +13,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
+    <style>
+      .property-map {
+        border: thin black solid;
+      }
+    </style>
+
   </head>
 
   <body>
     <nav>
-      <a href="/stands">All Stands</a>
-      <p><a href="/winds">Choosing a stand to hunt</a></p>
+      <div><a href="/">Home</a></div>
+      <div><a href="/stands">All Stands</a></div>
+      <div><a href="/winds">Choosing a stand to hunt</a></div>
       <hr>
     </nav>
     <%= yield %>
