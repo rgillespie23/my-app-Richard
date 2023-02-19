@@ -10,16 +10,16 @@
   <dt>Crops Planted</dt>
   <dd>
     <ul>
-      <%# @stand.crops.each do |a_crop| %>
-        <li>placeholder<%#= a_crop.crop_type %></li>
-      <%# end %>
+      <% @stand.crops.each do |a_crop| %>
+        <li><%= a_crop.crop_type %></li>
+      <% end %>
     </ul>
   </dd>
   <dt>Field Acreage</dt>
-  <dd><%= @stand.acreage_id %></dd>
+  <dd><%= @stand.acreage.acreage %></dd>
   <dt>Best Wind</dt>
-  <dd><%= @stand.best_wind_id %></dd>
+  <dd><%= @stand.best_wind.wind_direction %></dd>
   <dt>Worst Wind</dt>
-  <dd><%= @stand.worst_wind_id %></dd>
+  <dd><%= @stand.worst_wind.wind_direction %></dd>
 
 </dl>

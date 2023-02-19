@@ -10,4 +10,15 @@
 #  stand_id       :integer
 #
 class Foodsource < ApplicationRecord
+
+  def crop
+    my_crop_id = self.crop_id
+
+    matching_crops = Crop.where({ :id => my_crop_id })
+
+    the_crop = matching_crops.at(0)
+
+    return the_crop
+  end
+  
 end
