@@ -1,31 +1,39 @@
-<h1>List of Crops</h1>
+<div class ="entire_page">
+  <div class="title"> 
+    <h1>List of Crops</h1>
+  </div>
 
-<p><%= notice %></p>
+    <p><%= notice %></p>
 
-<form action="/insert_crop">
+  <div class="form">
+    <form action="/insert_crop">
 
-  <label for="crop_type">Crop Type</label>
-  <input id="crop_type" name="query_crop_type">
+      <label for="crop_type">Crop Type</label>
+      <input id="crop_type" name="query_crop_type">
 
-  <button>Add Crop</button>
-</form>
+      <button>Add Crop</button>
+    </form>
+  </div> 
 
-<p></p>
+    <p></p>
 
-<table border="1">
-  <tr>
-    <td>Crop</td>
-    <td>Details</td>
-  </tr>
-  <% @list_of_crops.each do |a_crop|%>
-    <% if a_crop.stands.at(0) != nil %>
+  <div class="table">
+    <table border="1">
       <tr>
-        <td><%= a_crop.crop_type %></td>
-        <td>
-          <a href="/crops/<%= a_crop.crop_id %>">Show details
-        </td>
+        <td>Crop</td>
+        <td>Details</td>
       </tr>
-    <% else %>
-    <% end%>
-  <% end %>
-</table>
+      <% @list_of_crops.each do |a_crop|%>
+        <% if a_crop.stands.at(0) != nil %>
+          <tr>
+            <td><%= a_crop.crop_type %></td>
+            <td>
+              <a href="/crops/<%= a_crop.crop_id %>">Show details
+            </td>
+          </tr>
+        <% else %>
+        <% end%>
+      <% end %>
+    </table>
+  </div>
+</div>

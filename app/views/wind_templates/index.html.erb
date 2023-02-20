@@ -1,16 +1,24 @@
-<h1>List of Winds</h1>
+<div class="entire_page">
+  <div class="title">  
+    <h1>List of Winds</h1>
+  </div>
 
-<table border="1">
-  <tr>
-    <td>Wind Direction</td>
-    <td>Details</td>
-  </tr>
-  <% @list_of_winds.each do |a_wind|%>
-  <tr>
-    <td><%= a_wind.wind_direction %></td>
-    <td>
-      <a href="/winds/<%= a_wind.wind_direction_id %>">Show details
-    </td>
-  </tr>
-  <% end %>
-</table>
+<p></p>
+
+  <div class="table">
+    <table border="1">
+      <tr>
+        <td>Wind Direction</td>
+        <td>Details</td>
+      </tr>
+      <% @list_of_winds.each do |a_wind|%>
+      <tr>
+        <td><%= a_wind.wind_direction %></td>
+        <td>
+          <a href="/winds/<%= a_wind.wind_direction_id %>">Show details
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
