@@ -1,45 +1,56 @@
-<h1>List of Stands</h1>
+<div class="entire_page">
 
-<p><%= notice %></p>
+  <div class="title">
+    <h1>List of Stands</h1>
+  </div>
 
-<form action="/insert_stand">
-  <label for="stand_name">Stand Name</label>
-  <input id="stand_name" name="query_name">
+  <p><%= notice %></p>
 
-  <label for="best_wind">Best Wind</label>
-  <input id="best_wind" name="query_best_wind"></input>
+  <div class="form">
+    <form action="/insert_stand">
+      <label for="stand_name">Stand Name</label>
+      <input id="stand_name" name="query_name">
 
-  <label for="worst_wind">Worst Wind</label>
-  <input id="worst_wind" name="query_worst_wind">
+      <label for="best_wind">Best Wind</label>
+      <input id="best_wind" name="query_best_wind" placeholder="Ex: East">
 
-  <label for="stand_type">Stand Type</label>
-  <input id="stand_type" name="query_stand_type">
+      <label for="worst_wind">Worst Wind</label>
+      <input id="worst_wind" name="query_worst_wind" placeholder="Ex: East">
 
-  <label for="acreage">Acreage</label>
-  <input id="acreage" name="query_acreage">
+      <label for="stand_type">Stand Type</label>
+      <input id="stand_type" name="query_stand_type" placeholder="Ex: Metal">
 
-  <label for="latitude">Latitude</label>
-  <input id="latitude" name="query_latitude">
+      <p></p>
 
-  <label for="longitude">Longitude</label>
-  <input id="longitude" name="query_longitude">
+      <label for="acreage">Acreage</label>
+      <input id="acreage" name="query_acreage" placeholder="Ex: 1.00">
 
-  <button>Add Stand</button>
-</form>
+      <label for="latitude">Latitude</label>
+      <input id="latitude" name="query_latitude" placeholder="Ex: 78.123456">
 
-<p></p>
+      <label for="longitude">Longitude</label>
+      <input id="longitude" name="query_longitude" placeholder="Ex: 78.123456">
 
-<table border="1">
-  <tr>
-    <td>Stand Name</td>
-    <td>Details</td>
-  </tr>
-  <% @list_of_stands.each do |a_stand|%>
-  <tr>
-    <td><%= a_stand.stand_name %></td>
-    <td>
-      <a href="/stands/<%= a_stand.stand_id %>">Show details
-    </td>
-  </tr>
-  <% end %>
-</table>
+      <button>Add Stand</button>
+    </form>
+  </div>
+
+  <p></p>
+
+  <div class="table">
+    <table border="1">
+      <tr>
+        <td>Stand Name</td>
+        <td>Details</td>
+      </tr>
+      <% @list_of_stands.each do |a_stand|%>
+      <tr>
+        <td><%= a_stand.stand_name %></td>
+        <td>
+          <a href="/stands/<%= a_stand.stand_id %>">Show details
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div> 
+</div>
