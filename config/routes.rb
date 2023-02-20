@@ -22,6 +22,4 @@ Rails.application.routes.draw do
 
   get("/insert_crop", { :controller => "crop", :action => "new_crop"})
 
-  get("/map", { :controller => "map", :action => "practice_map"})
-
 end

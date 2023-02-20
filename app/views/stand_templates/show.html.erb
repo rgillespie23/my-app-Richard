@@ -22,7 +22,7 @@
         });
         
         var marker = new google.maps.Marker({
-          position: {lat: 34.5401488, lng: -80.7370185}, 
+          position: {lat: <%= @stand.latitude %>, lng: <%= @stand.longitude %>}, 
           map: map,
           title: 'Hello World!',
           icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' 
@@ -32,7 +32,7 @@
           infowindow.open(map, marker);
         });
 
-      bounds.extend(new google.maps.LatLng(34.5401488, -80.7370185));
+      bounds.extend(new google.maps.LatLng(<%= @stand.latitude.round(6) %>, <%= @stand.longitude.round(6) %>));
 
       map.fitBounds(bounds);
       };
