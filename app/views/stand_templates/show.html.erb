@@ -3,10 +3,11 @@
 <a href="/stands">Go back</a>
 <hr>
 <dl>
-  <dt>Map of <%= @stand.stand_name %></dt>
+  <dt>Map of <%= @stand.stand_name %>:</dt>
+  <p></p>
   <dd>
     <div>
-      <div id="map" style='width: 800px; height: 400px;'></div>
+      <div id="map" style='width: 750px; height: 500px;'></div>
     </div>
 
     <script>
@@ -42,8 +43,10 @@
     async defer></script>
     
   </dd>
+  <p></p>
   <dt>Type of Stand</dt>
   <dd><%= @stand.stand_type.type_of_stand %></dd>
+  <p></p>
   <dt>Crops Planted</dt>
   <dd>
     <ul>
@@ -52,12 +55,19 @@
       <% end %>
     </ul>
   </dd>
+  <p></p>
   <dt>Field Acreage</dt>
   <dd><%= @stand.acreage.acreage %></dd>
+  <p></p>
   <dt>Best Wind</dt>
   <dd><%= @stand.best_wind.wind_direction %></dd>
+  <p></p>
   <dt>Worst Wind</dt>
   <dd><%= @stand.worst_wind.wind_direction %></dd>
+  <p></p>
+  <dt>Created At</dt>
+  <dd><%= @stand.created_at %></dd>
+  <p></p>
   <dt>Delete stand</dt>
   <dd>
     <a href="/delete_stand/<%= @stand.stand_id %>;">
