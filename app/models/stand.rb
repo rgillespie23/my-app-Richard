@@ -3,6 +3,8 @@
 # Table name: stands
 #
 #  id            :integer          not null, primary key
+#  latitude      :float
+#  longitude     :float
 #  stand_name    :string
 #  type_of_stand :integer
 #  created_at    :datetime         not null

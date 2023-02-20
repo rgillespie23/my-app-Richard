@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_18_232342) do
+ActiveRecord::Schema.define(version: 2023_02_19_233509) do
 
   create_table "acreages", force: :cascade do |t|
     t.integer "acreage_id"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2023_02_18_232342) do
     t.integer "acreage_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "types", force: :cascade do |t|

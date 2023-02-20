@@ -19,11 +19,15 @@ class StandController < ApplicationController
     input_worst_wind = params.fetch("query_worst_wind")
     input_best_wind = params.fetch("query_best_wind")
     input_stand_type = params.fetch("query_stand_type")
+    input_latitude = params.fetch("query_latitude")
+    input_longitude = params.fetch("query_longitude")
     
     if Wind.where(:wind_direction =>input_best_wind).at(0) != nil && Wind.where(:wind_direction => input_worst_wind).at(0) != nil && Type.where(:type_of_stand => input_stand_type).at(0) != nil
       a_new_stand = Stand.new
 
       a_new_stand.stand_name = input_stand_name
+      a_new_stand.latitude = input_latitude
+      a_new_stand.longitude = input_longitude
       a_new_stand.best_wind_id = Wind.where(:wind_direction =>input_best_wind).at(0).wind_direction_id
       a_new_stand.worst_wind_id = Wind.where(:wind_direction => input_worst_wind).at(0).wind_direction_id
       a_new_stand.type_of_stand = Type.where(:type_of_stand => input_stand_type).at(0).type_of_stand_id
