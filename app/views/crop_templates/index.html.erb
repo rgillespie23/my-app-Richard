@@ -20,8 +20,16 @@
   <div class="table">
     <table border="1">
       <tr>
-        <td>Crop</td>
-        <td>Details</td>
+        <td>
+          <div class="title">
+            Crop
+          </div>  
+        </td>
+        <td>
+          <div class="title">
+            Details
+          </div>  
+        </td>
       </tr>
       <% @list_of_crops.each do |a_crop|%>
         <% if a_crop.stands.at(0) != nil %>

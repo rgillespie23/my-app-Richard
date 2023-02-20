@@ -8,6 +8,7 @@
 
   <div class="form">
     <form action="/insert_stand">
+      
       <label for="stand_name">Stand Name</label>
       <input id="stand_name" name="query_name">
 
@@ -17,7 +18,7 @@
       <label for="worst_wind">Worst Wind</label>
       <input id="worst_wind" name="query_worst_wind" placeholder="Ex: East">
 
-      <label for="stand_type">Stand Type</label>
+      <label for="stand_type">Stand Type</label> 
       <input id="stand_type" name="query_stand_type" placeholder="Ex: Metal">
 
       <p></p>
@@ -31,7 +32,11 @@
       <label for="longitude">Longitude</label>
       <input id="longitude" name="query_longitude" placeholder="Ex: 78.123456">
 
-      <button>Add Stand</button>
+      <button>
+        <div class="button">
+          Add Stand
+        </div>
+        </button>
     </form>
   </div>
 
@@ -40,8 +45,16 @@
   <div class="table">
     <table border="1">
       <tr>
-        <td>Stand Name</td>
-        <td>Details</td>
+          <td>
+            <div class="title">
+              Stand Name
+            </div>
+          </td>
+          <td>
+            <div class="title">
+              Details
+            </div>  
+          </td>
       </tr>
       <% @list_of_stands.each do |a_stand|%>
       <tr>
