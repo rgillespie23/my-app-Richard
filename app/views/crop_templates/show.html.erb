@@ -6,7 +6,9 @@
 <ul>
   <% @crop.stands.each do |a_stand|%>
   <li>
-    <a href="/stands/<%= a_stand.stand_id %>"><%= a_stand.stand_name %></a>
+    <div class="text">
+      <a href="/stands/<%= a_stand.stand_id %>"><%= a_stand.stand_name %></a>
+    </div>
   </li>
   <% end %>
 </ul>

@@ -11,7 +11,11 @@
       <label for="crop_type">Crop Type</label>
       <input id="crop_type" name="query_crop_type">
 
-      <button>Add Crop</button>
+      <button>
+        <div class="button">
+          Add Crop
+        </div>
+      </button>
     </form>
   </div> 
 
@@ -22,21 +26,31 @@
       <tr>
         <td>
           <div class="title">
-            Crop
+            <div class="text">
+              Crop
+            </div>
           </div>  
         </td>
         <td>
           <div class="title">
-            Details
+            <div class="text">
+              Details
+            </div>
           </div>  
         </td>
       </tr>
       <% @list_of_crops.each do |a_crop|%>
         <% if a_crop.stands.at(0) != nil %>
           <tr>
-            <td><%= a_crop.crop_type %></td>
             <td>
-              <a href="/crops/<%= a_crop.crop_id %>">Show details
+              <div class="text">
+                <%= a_crop.crop_type %>
+              </div>
+            </td>
+            <td>
+              <div class="text">
+                <a href="/crops/<%= a_crop.crop_id %>">Show details
+              </div>
             </td>
           </tr>
         <% else %>

@@ -14,10 +14,15 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <style>
+
+      label{
+        font-size: 20px;
+      }
+
       a{
         color: yellow;
       }
-      
+
       body{
         background-color: #55423d;
         color: white;
@@ -61,7 +66,15 @@
       }
 
       .text{
+        font-size: 20px;
+      }
+
+      .text_2{
         font-size: 18px;
+      }
+
+      .text_color{
+        color: #ffc6c7;
       }
 
     </style>
@@ -70,10 +83,10 @@
 
   <body>
     <nav>
-      <div><a href="/">Home</a></div>
-      <div><a href="/stands">All Stands</a></div>
-      <div><a href="/winds">Choosing a stand to hunt based on wind</a></div>
-      <div><a href="/crops">Choosing a stand to hunt based on crops</a></div>
+      <div class="text"><a href="/">Home</a></div>
+      <div class="text"><a href="/stands">All Stands</a></div>
+      <div class="text"><a href="/winds">Choosing a stand to hunt based on wind</a></div>
+      <div class="text"><a href="/crops">Choosing a stand to hunt based on crops</a></div>
       <hr>
     </nav>
     <%= yield %>

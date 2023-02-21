@@ -10,20 +10,30 @@
       <tr>
         <td>
           <div class="title">
-            Wind Direction
+            <div class="text">
+              Wind Direction
+            </div>
           </div>
         </td>
         <td>
           <div class="title">
-            Details
+            <div class="text">
+              Details
+            </div>
           </div>
         </td>
       </tr>
       <% @list_of_winds.each do |a_wind|%>
       <tr>
-        <td><%= a_wind.wind_direction %></td>
         <td>
-          <a href="/winds/<%= a_wind.wind_direction_id %>">Show details
+          <div class="text">
+            <%= a_wind.wind_direction %>
+          </div>
+        </td>
+        <td>
+          <div class="text">
+            <a href="/winds/<%= a_wind.wind_direction_id %>">Show details
+          </div>
         </td>
       </tr>
       <% end %>

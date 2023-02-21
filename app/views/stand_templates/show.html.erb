@@ -1,9 +1,15 @@
 <h1><%= @stand.stand_name %></h1>
 
-<a href="/stands">Go back</a>
+<div class="text_color">
+  <a href="/stands">Go back</a>
+</div>
 <hr>
 <dl>
-  <dt>Map of <%= @stand.stand_name %>:</dt>
+  <dt>
+    <div class="text">
+      Map of <%= @stand.stand_name %>:
+    </div>
+  </dt>
   <p></p>
   <dd>
     <div>
@@ -44,34 +50,88 @@
     
   </dd>
   <p></p>
-  <dt>Type of Stand</dt>
-  <dd><%= @stand.stand_type.type_of_stand %></dd>
+  <dt>
+    <div class="text">
+      Type of Stand
+    </div>
+  </dt>
+  <dd>
+    <div class="text">
+      <%= @stand.stand_type.type_of_stand %>
+    </div>
+  </dd>
   <p></p>
-  <dt>Crops Planted</dt>
+  <dt>
+    <div class="text">
+      Crops Planted
+    </div>
+  </dt>
   <dd>
     <ul>
       <% @stand.crops.each do |a_crop| %>
-        <li><%= a_crop.crop_type %></li>
+        <li>
+          <div class="text_2">
+            <%= a_crop.crop_type %>
+          </div>
+        </li>
       <% end %>
     </ul>
   </dd>
   <p></p>
-  <dt>Field Acreage</dt>
-  <dd><%= @stand.acreage.acreage %></dd>
+  <dt>
+    <div class="text">
+      Field Acreage
+    </div>
+  </dt>
+  <dd>
+    <div class="text">
+      <%= @stand.acreage.acreage %>
+    </div>
+  </dd>
   <p></p>
-  <dt>Best Wind</dt>
-  <dd><%= @stand.best_wind.wind_direction %></dd>
+  <dt>
+    <div class="text">
+      Best Wind
+    </div>
+  </dt>
+  <dd>
+    <div class="text">
+      <%= @stand.best_wind.wind_direction %>
+    </div>
+  </dd>
   <p></p>
-  <dt>Worst Wind</dt>
-  <dd><%= @stand.worst_wind.wind_direction %></dd>
+  <dt>
+    <div class="text">
+      Worst Wind
+    </div>
+  </dt>
+  <dd>
+    <div class="text">
+      <%= @stand.worst_wind.wind_direction %>
+    </div>
+  </dd>
   <p></p>
-  <dt>Created At</dt>
-  <dd><%= @stand.created_at %></dd>
+  <dt>
+    <div class="text">
+      Created At
+    </div>
+  </dt>
+  <dd>
+    <div class="text">
+      <%= @stand.created_at %>
+    </div>
+  </dd>
   <p></p>
-  <dt>Delete stand</dt>
+  <dt>
+    <div class="text">
+      Delete stand
+    </div>
+  </dt>
   <dd>
     <a href="/delete_stand/<%= @stand.stand_id %>;">
-      Delete this stand
+      <div class="text">
+        Delete this stand
+      </div>
     </a>
   </dd>
 
@@ -88,5 +148,9 @@
   <label for="crop">Crop</label>
   <input id="crop" type="text" name="query_crop">
 
-  <button>Add crop</button>
+  <button>
+    <div class="button">
+      Add crop
+    </div>
+  </button>
 </form>
