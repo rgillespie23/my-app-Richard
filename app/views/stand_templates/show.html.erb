@@ -4,6 +4,11 @@
   <a href="/stands">Go back</a>
 </div>
 <hr>
+
+<div class="notice_1">
+  <p><%= notice %></p>
+</div>
+
 <dl>
   <dt>
     <div class="text">
@@ -138,8 +143,6 @@
 </dl>
 
 <h3>Add a new crop to <%= @stand.stand_name %></h3>
-
-<p><%= notice %></p>
 
 <form action="/insert_new_crop">
   <label for="stand">Stand ID</label>
