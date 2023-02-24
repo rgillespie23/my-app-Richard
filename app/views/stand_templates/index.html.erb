@@ -8,6 +8,7 @@
   <p><%= notice %></p>
 </div>
 
+<% if session.fetch(:user_id) != nil %> 
   <div class="form">
     <form action="/insert_stand">
       
@@ -41,6 +42,8 @@
         </button>
     </form>
   </div>
+  <% else %>
+  <% end %>
 
   <p></p>
 

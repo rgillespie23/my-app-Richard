@@ -127,33 +127,43 @@
     </div>
   </dd>
   <p></p>
-  <dt>
-    <div class="text">
-      Delete stand
-    </div>
-  </dt>
-  <dd>
-    <a href="/delete_stand/<%= @stand.stand_id %>;">
+  
+  <% if session.fetch(:user_id) != nil %> 
+
+    <dt>
       <div class="text">
-        Delete this stand
+        Delete stand
       </div>
-    </a>
-  </dd>
+    </dt>
+
+    <dd>
+      <a href="/delete_stand/<%= @stand.stand_id %>;">
+        <div class="text">
+          Delete this stand
+        </div>
+      </a>
+    </dd>
+  <% else %>
+  <% end %>
 
 </dl>
 
+<% if session.fetch(:user_id) != nil %> 
+
 <h3>Add a new crop to <%= @stand.stand_name %></h3>
 
-<form action="/insert_new_crop">
-  <label for="stand">Stand ID</label>
-  <input id="stand" type="text" value="<%= @stand.stand_id %>" name="input_stand_id">
+  <form action="/insert_new_crop">
+    <label for="stand">Stand ID</label>
+    <input id="stand" type="text" value="<%= @stand.stand_id %>" name="input_stand_id">
 
-  <label for="crop">Crop</label>
-  <input id="crop" type="text" name="query_crop">
+    <label for="crop">Crop</label>
+    <input id="crop" type="text" name="query_crop">
 
-  <button>
-    <div class="button">
-      Add crop
-    </div>
-  </button>
-</form>
+    <button>
+      <div class="button">
+        Add crop
+      </div>
+    </button>
+  </form>
+<% else %>
+<% end %>

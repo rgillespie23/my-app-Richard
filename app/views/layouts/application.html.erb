@@ -103,6 +103,11 @@
 
   <body>
     <nav>
+      <% if session[:user_id] == nil%>
+        <div class="text"><a href="/user_sign_in">Sign In</a></div>
+      <% else %>
+        <div class="text"><a href="/user_sign_out">Sign Out</a></div>
+      <% end%>
       <div class="text"><a href="/">Home</a></div>
       <div class="text"><a href="/stands">All Stands</a></div>
       <div class="text"><a href="/winds">Choosing a stand to hunt based on wind</a></div>
