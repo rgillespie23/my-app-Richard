@@ -16,7 +16,15 @@
       <input id="stand_name" name="query_name">
 
       <label for="best_wind">Best Wind</label>
-      <input id="best_wind" name="query_best_wind" placeholder="Ex: East">
+      <!--<input id="best_wind" name="query_best_wind" placeholder="Ex: East">-->
+
+      <select name="query_best_wind" id="best_wind">
+          <% Wind.all.order(:wind_direction_id).each do |a_best_wind_id|%>
+            <option value="<%= Wind.where( :wind_direction_id => a_best_wind_id).at(0).wind_direction %>">
+              <%= Wind.where(:wind_direction_id => a_best_wind_id).at(0).wind_direction %>
+            </option>
+          <% end %>
+        </select>
 
       <label for="worst_wind">Worst Wind</label>
       <input id="worst_wind" name="query_worst_wind" placeholder="Ex: East">
