@@ -19,18 +19,34 @@
       <!--<input id="best_wind" name="query_best_wind" placeholder="Ex: East">-->
 
       <select name="query_best_wind" id="best_wind">
-          <% Wind.all.order(:wind_direction_id).each do |a_best_wind_id|%>
-            <option value="<%= Wind.where( :wind_direction_id => a_best_wind_id).at(0).wind_direction %>">
-              <%= Wind.where(:wind_direction_id => a_best_wind_id).at(0).wind_direction %>
-            </option>
-          <% end %>
-        </select>
+        <% Wind.all.order(:wind_direction_id).each do |a_best_wind_id|%>
+          <option value="<%= Wind.where( :wind_direction_id => a_best_wind_id).at(0).wind_direction %>">
+            <%= Wind.where(:wind_direction_id => a_best_wind_id).at(0).wind_direction %>
+          </option>
+        <% end %>
+      </select>
 
       <label for="worst_wind">Worst Wind</label>
-      <input id="worst_wind" name="query_worst_wind" placeholder="Ex: East">
+      <!--<input id="worst_wind" name="query_worst_wind" placeholder="Ex: East">-->
+
+      <select name="query_worst_wind" id="worst_wind">
+        <% Wind.all.order(:wind_direction_id).each do |a_worst_wind_id|%>
+          <option value="<%= Wind.where( :wind_direction_id => a_worst_wind_id).at(0).wind_direction %>">
+            <%= Wind.where(:wind_direction_id => a_worst_wind_id).at(0).wind_direction %>
+          </option>
+        <% end %>
+      </select>
 
       <label for="stand_type">Stand Type</label> 
-      <input id="stand_type" name="query_stand_type" placeholder="Ex: Metal">
+      <!--<input id="stand_type" name="query_stand_type" placeholder="Ex: Metal">-->
+
+      <select name="query_stand_type" id="stand_type">
+        <% Type.all.order(:type_of_stand_id).each do |a_stand_type_id|%>
+          <option value="<%= Type.where( :type_of_stand_id => a_stand_type_id).at(0).type_of_stand %>">
+            <%= Type.where(:type_of_stand_id => a_stand_type_id).at(0).type_of_stand %>
+          </option>
+        <% end %>
+      </select>
 
       <p></p>
 
