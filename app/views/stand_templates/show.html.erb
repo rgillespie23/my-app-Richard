@@ -157,7 +157,15 @@
     <input id="stand" type="text" value="<%= @stand.stand_id %>" name="input_stand_id">
 
     <label for="crop">Crop</label>
-    <input id="crop" type="text" name="query_crop">
+    <!--<input id="crop" type="text" name="query_crop">-->
+
+    <select name="query_crop" id="crop">
+      <% Crop.all.order(:crop_id).each do |a_crop_id|%>
+        <option value="<%= Crop.where( :crop_id => a_crop_id).at(0).crop_type %>">
+          <%= Crop.where(:crop_id => a_crop_id).at(0).crop_type %>
+        </option>
+      <% end %>
+    </select>
 
     <button>
       <div class="button">
