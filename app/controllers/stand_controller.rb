@@ -71,7 +71,8 @@ class StandController < ApplicationController
       a_new_foodsource.crop_id = Crop.where(:crop_type => input_crop_type).at(0).crop_id
       a_new_foodsource.save
 
-      #have to do 2 lines below because messed up my original tables because I forgot it would automatically assign a column for id 
+      #have to do 2 lines below because messed up my original tables because I forgot it would automatically assign a column for id
+       
       a_new_foodsource.food_source_id = a_new_foodsource.id
       a_new_foodsource.save
 

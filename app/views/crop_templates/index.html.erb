@@ -44,7 +44,7 @@
           </div>  
         </td>
       </tr>
-      <% @list_of_crops.each do |a_crop|%>
+      <% @list_of_crops.order({ :crop_type => :asc}).each do |a_crop|%>
         <% if a_crop.stands.at(0) != nil %>
           <tr>
             <td>

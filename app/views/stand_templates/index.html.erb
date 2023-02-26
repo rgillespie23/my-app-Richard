@@ -89,7 +89,7 @@
             </div>  
           </td>
       </tr>
-      <% @list_of_stands.each do |a_stand|%>
+      <% @list_of_stands.order({ :stand_name => :asc}).each do |a_stand|%>
       <tr>
         <td>
           <div class="text">
