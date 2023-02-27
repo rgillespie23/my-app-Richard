@@ -153,8 +153,8 @@
 <h3>Add a new crop to <%= @stand.stand_name %></h3>
 
   <form action="/insert_new_crop">
-    <label for="stand">Stand ID</label>
-    <input id="stand" type="text" value="<%= @stand.stand_id %>" name="input_stand_id">
+    <!--<label for="stand">Stand ID</label>-->
+    <input id="stand" type="hidden" value="<%= @stand.stand_id %>" name="input_stand_id">
 
     <label for="crop">Crop</label>
     <!--<input id="crop" type="text" name="query_crop">-->
