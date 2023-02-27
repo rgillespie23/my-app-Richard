@@ -3,9 +3,12 @@
     <h1>List of Crops</h1>
   </div>
 
-<div class="notice_2">
-  <p><%= notice %></p>
-</div>
+<% if session.fetch(:user_id) != nil %> 
+  <div class="notice_2">
+    <p><%= notice %></p>
+  </div>
+<% else %>
+<% end %>
 
 <% if session.fetch(:user_id) != nil %> 
   <div class="form">

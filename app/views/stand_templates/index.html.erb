@@ -4,9 +4,12 @@
     <h1>List of Stands</h1>
   </div>
 
-<div class="notice">
-  <p><%= notice %></p>
-</div>
+<% if session.fetch(:user_id) != nil %> 
+  <div class="notice">
+    <p><%= notice %></p>
+  </div>
+<% else %>
+<% end %>
 
 <% if session.fetch(:user_id) != nil %> 
   <div class="form">
