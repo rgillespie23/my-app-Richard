@@ -92,19 +92,22 @@
             </div>  
           </td>
       </tr>
-      <% @list_of_stands.order({ :stand_name => :asc}).each do |a_stand|%>
-      <tr>
-        <td>
-          <div class="text">
-            <%= a_stand.stand_name %>
-          </div>
-        </td>
-        <td>
-          <div class="text_2">
-            <a href="/stands/<%= a_stand.stand_id %>">Show details
-          </div>
-        </td>
-      </tr>
+      <% if @list_of_stands.at(0) != nil %>
+        <% @list_of_stands.order({ :stand_name => :asc}).each do |a_stand|%>
+        <tr>
+          <td>
+            <div class="text">
+              <%= a_stand.stand_name %>
+            </div>
+          </td>
+          <td>
+            <div class="text_2">
+              <a href="/stands/<%= a_stand.stand_id %>">Show details
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      <% else %>
       <% end %>
     </table>
   </div> 
